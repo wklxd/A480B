@@ -1,0 +1,151 @@
+0413update:
+Hotpatch no update.
+Clover update
+Kexts update,（no rehabman build）
+Etc……
+
+Clover EFI installer log - Mon Apr  8 18:18:36 CST 2019
+Installer version: v2.4k r4918 EFI bootloader
+======================================================
+/dev/disk0 (internal):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                         512.1 GB   disk0
+   1:                        EFI EFI                     535.8 MB   disk0s1
+   2:                 Apple_APFS Container disk2         171.8 GB   disk0s2
+   3:       Microsoft Basic Data                         74.1 GB    disk0s3
+   4:           Windows Recovery                         1.0 GB     disk0s4
+   5:       Microsoft Basic Data                         96.6 GB    disk0s5
+   6:           Linux Filesystem                         1.1 GB     disk0s6
+   7: FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF               166.9 GB   disk0s7
+
+/dev/disk1 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *256.1 GB   disk1
+   1:                        EFI EFI                     209.7 MB   disk1s1
+   2:           Linux Filesystem                         64.4 GB    disk1s2
+
+/dev/disk2 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +171.8 GB   disk2
+                                 Physical Store disk0s2
+   1:                APFS Volume macOS                   150.6 GB   disk2s1
+   2:                APFS Volume Preboot                 66.7 MB    disk2s2
+   3:                APFS Volume Recovery                1.0 GB     disk2s3
+   4:                APFS Volume VM                      24.6 KB    disk2s4
+
+/dev/disk3 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                            Clover_v2.4k_Specia... +94.3 MB    disk3
+
+Target volume /Volumes/macOS on disk2 is APFS on physical store disk0s2
+======================================================
+Backing up EFI files
+
+Backing up /Volumes/macOS/EFIROOTDIR/EFI folder to /Volumes/macOS/EFI-Backups/r4895/2019-04-08-18h18/EFI
+======================================================
+Installing BootSectors/BootLoader
+
+Stage 0 - Don't write any of boot0af, boot0md, boot0ss to /
+Stage 1 - Don't write any of boot1h2, boot1f32alt, boot1xalt to /
+
+Removing drivers64UEFI/SMCHelper-64.efi driver because VirtualSMC driver present
+
+Removing drivers64UEFI/VBoxHfs-64.efi driver because HFSPlus driver present
+
+Removing drivers64UEFI/AppleImageCodec-64.efi driver because AppleUiSupport driver present
+
+Removing drivers64UEFI/AppleKeyAggregator-64.efi driver because AppleUiSupport driver present
+
+Removing drivers64UEFI/AppleUITheme-64.efi driver because AppleUiSupport driver present
+
+Removing drivers64UEFI/FirmwareVolume-64.efi driver because AppleUiSupport driver present
+
+Removing drivers64UEFI/HashServiceFix-64.efi driver because AppleUiSupport driver present
+======================================================
+Installing  FakeSMC.kext in Clover EFI. Removing any kexts VirtualSMC and driver VirtualSmc.efi because FakeSMC.kext is used
+
+======================================================
+Installing RC Scripts
+
+Installing RC scripts on target volume '/'
+
+Activating /etc/rc.boot.d/70.disable_sleep_proxy_client.local rc script
+
+======================================================
+=========== Clover EFI Installation Finish ===========
+======================================================
+
+
+Clover EFI installer log - Wed Nov 21 21:32:38 CST 2018
+version: v2.4k r4769 EFI bootloader
+======================================================
+
+1.Update to rehabman's repo：https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch
+log:
+ningnandeMacBook-Pro% git pull
+remote: Enumerating objects: 34, done.
+remote: Counting objects: 100% (34/34), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 21 (delta 17), reused 18 (delta 14), pack-reused 0
+展开对象中: 100% (21/21), 完成.
+来自 https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch
+   cf6ccb0..05a1e82  master     -> origin/master
+更新 a94a451..05a1e82
+Fast-forward
+ download.sh                                        |   2 +-
+ hotpatch/SSDT-USB-1020-G1.asl                      |   8 +-
+ hotpatch/SSDT-USB-4x0-G1.asl                       |   8 +-
+ hotpatch/SSDT-USB-4x0-G2.asl                       |  16 +-
+ hotpatch/SSDT-USB-6x0-G1.asl                       |  12 +-
+ hotpatch/SSDT-USB-8x0-G1.asl                       |  20 +-
+ hotpatch/SSDT-USB-8x0-G2.asl                       |  18 +-
+ hotpatch/SSDT-USB-9x80.asl                         |  12 +-
+ hotpatch/SSDT-USB-ZBook-G1.asl                     |  24 +-
+ hotpatch/SSDT-USB-ZBook-G2.asl                     |  24 +-
+ install_downloads.sh                               |   7 +-
+ kexts/AppleALC.kext/Contents/MacOS/AppleALC        | Bin 907144 -> 0 bytes
+ .../Contents/Info.plist => AppleALC_Info.plist}    | 533 ++++++++++++++++++++-
+ 13 files changed, 592 insertions(+), 92 deletions(-)
+ delete mode 100755 kexts/AppleALC.kext/Contents/MacOS/AppleALC
+ rename kexts/{AppleALC.kext/Contents/Info.plist => AppleALC_Info.plist} (93%)\
+
+2.Switch FakeSMC to VirtualSMC:
+
+3.kext update last version.
+
+4.suggest bios setting:
+To start, set BIOS to defaults.
+
+Then insure:
+- UEFI boot is enabled (hybrid/with CSM for best result)
+- secure boot is disabled
+- disable fast boot
+- IGPU graphics memory set to 64mb, if available
+- disable the serial port via BIOS option, if available
+- disable "LAN/WLAN switching", if available
+- disable "Extended Idle Power States" if you find it under "Power Management Options"
+- disable "Wake on LAN" and "Wake on USB"
+- disable Firewire/IEEE 1394, if your laptop has it
+- for Skylake and KabyLake laptop, enable "Launch Hotkeys without Fn keypress"
+
+5.wireless card:
+miniPCIe：BCM94352HMB、DW1550
+m.2:BCM94352ZAE，DW1560
+
+6.suggest SSD:
+Sata：Any
+M.2:no PM981,suggest:960pro,960EVO,SM961,PM961
+
+QQ Group1: 43518833（suggest）
+QQ Group2: 612655811（code）
+
+
+Credits
+Rehabman,vit9696，hackintosher……
+
+origin link：https://www.tonymacx86.com/threads/guide-hp-probook-elitebook-zbook-using-clover-uefi-hotpatch.261719/
+
+https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch
+
+I know that no one wants to look at this in detail. All of them do not have Chinese, and foreigners cannot understand this.
+							---by woyi 2019.04.13

@@ -1,0 +1,102 @@
+5:105  3:092  Found BIOS RSDP at FDF00
+5:105  0:000  Printing ACPI tables from RSDP FDF00 ...
+5:105  0:000   FDF00: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+5:105  0:000    (Xsdt: DA065078, Rsdt: DA065028)
+5:105  0:000    DA065078: 'XSDT', 'PARADISE', Rev: 1, Len: 116
+5:105  0:000    DA065028: 'RSDT', 'PARADISE', Rev: 1, Len: 76
+5:105  0:000    Tables in Xsdt: 10
+5:105  0:000    0. DA06FFE0: 'FACP', 'PARADISE', Rev: 4, Len: 244
+5:105  0:000        (Dsdt: DA065180, Facs: DA1E4F80, XDsdt: DA065180, XFacs: 0)
+5:105  0:000        DA065180: 'DSDT', 'PARADISE', Rev: 2, Len: 44638
+5:106  0:001        DA1E4F80: 'FACS', Ver: 2, Len: 64
+5:106  0:000    1. DA0700D8: 'APIC', 'PARADISE', Rev: 3, Len: 114
+5:106  0:000    2. DA070150: 'FPDT', 'PARADISE', Rev: 1, Len: 68
+5:106  0:000    3. DA070198: 'ASF!', ' HCG', Rev: 32, Len: 165
+5:106  0:000    4. DA070240: 'MCFG', 'PARADISE', Rev: 1, Len: 60
+5:106  0:000    5. DA070280: 'HPET', 'PARADISE', Rev: 1, Len: 56
+5:106  0:000    6. DA0702B8: 'SSDT', 'SataTabl', Rev: 1, Len: 877
+5:106  0:000    7. DA070628: 'SSDT', 'Cpu0Ist', Rev: 1, Len: 2408
+5:106  0:000    8. DA070F90: 'SSDT', 'CpuPm', Rev: 1, Len: 2706
+5:106  0:000    9. DA071A28: 'ECDT', 'PARADISE', Rev: 1, Len: 193
+5:106  0:000    Tables in Rsdt: 10
+5:106  0:000    0. DA0650F8: 'FACP', 'PARADISE', Rev: 2, Len: 132
+5:106  0:000        (Dsdt: DA065180, Facs: DA1E4F40)
+5:106  0:000        DA065180: 'DSDT', 'PARADISE', Rev: 2, Len: 44638
+5:107  0:001        DA1E4F40: 'FACS', Ver: 0, Len: 64
+5:107  0:000    1. DA0700D8: 'APIC', 'PARADISE', Rev: 3, Len: 114
+5:107  0:000    2. DA070150: 'FPDT', 'PARADISE', Rev: 1, Len: 68
+5:107  0:000    3. DA070198: 'ASF!', ' HCG', Rev: 32, Len: 165
+5:107  0:000    4. DA070240: 'MCFG', 'PARADISE', Rev: 1, Len: 60
+5:107  0:000    5. DA070280: 'HPET', 'PARADISE', Rev: 1, Len: 56
+5:107  0:000    6. DA0702B8: 'SSDT', 'SataTabl', Rev: 1, Len: 877
+5:107  0:000    7. DA070628: 'SSDT', 'Cpu0Ist', Rev: 1, Len: 2408
+5:107  0:000    8. DA070F90: 'SSDT', 'CpuPm', Rev: 1, Len: 2706
+5:107  0:000    9. DA071A28: 'ECDT', 'PARADISE', Rev: 1, Len: 193
+5:107  0:000  Found UEFI Acpi 2.0 RSDP at DA065000
+5:107  0:000  Saving ACPI tables from RSDP DA065000 to EFI\CLOVER\ACPI\origin ...
+5:107  0:000   DA065000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+5:107  0:000    (Xsdt: DA065078, Rsdt: DA065028)
+5:107  0:000    DA065078: 'XSDT', 'PARADISE', Rev: 1, Len: 116
+5:107  0:000    DA065028: 'RSDT', 'PARADISE', Rev: 1, Len: 76
+5:107  0:000    Tables in Xsdt: 10
+5:107  0:000    0. DA06FFE0: 'FACP', 'PARADISE', Rev: 4, Len: 244
+5:107  0:000        (Dsdt: DA065180, Facs: DA1E4F80, XDsdt: DA065180, XFacs: 0)
+5:107  0:000        DA065180: 'DSDT', 'PARADISE', Rev: 2, Len: 44638
+5:108  0:001        DA1E4F80: 'FACS', Ver: 2, Len: 64
+5:108  0:000    1. DA0700D8: 'APIC', 'PARADISE', Rev: 3, Len: 114
+5:108  0:000    2. DA070150: 'FPDT', 'PARADISE', Rev: 1, Len: 68
+5:108  0:000    3. DA070198: 'ASF!', ' HCG', Rev: 32, Len: 165
+5:108  0:000    4. DA070240: 'MCFG', 'PARADISE', Rev: 1, Len: 60
+5:108  0:000    5. DA070280: 'HPET', 'PARADISE', Rev: 1, Len: 56
+5:108  0:000    6. DA0702B8: 'SSDT', 'SataTabl', Rev: 1, Len: 877
+5:108  0:000    7. DA070628: 'SSDT', 'Cpu0Ist', Rev: 1, Len: 2408
+5:108  0:000    8. DA070F90: 'SSDT', 'CpuPm', Rev: 1, Len: 2706
+5:108  0:000    9. DA071A28: 'ECDT', 'PARADISE', Rev: 1, Len: 193
+5:108  0:000    Tables in Rsdt: 10
+5:108  0:000    0. DA0650F8: 'FACP', 'PARADISE', Rev: 2, Len: 132
+5:108  0:000        (Dsdt: DA065180, Facs: DA1E4F40)
+5:108  0:000        DA065180: 'DSDT', 'PARADISE', Rev: 2, Len: 44638
+5:109  0:001        DA1E4F40: 'FACS', Ver: 0, Len: 64
+5:109  0:000    1. DA0700D8: 'APIC', 'PARADISE', Rev: 3, Len: 114
+5:109  0:000    2. DA070150: 'FPDT', 'PARADISE', Rev: 1, Len: 68
+5:109  0:000    3. DA070198: 'ASF!', ' HCG', Rev: 32, Len: 165
+5:109  0:000    4. DA070240: 'MCFG', 'PARADISE', Rev: 1, Len: 60
+5:109  0:000    5. DA070280: 'HPET', 'PARADISE', Rev: 1, Len: 56
+5:109  0:000    6. DA0702B8: 'SSDT', 'SataTabl', Rev: 1, Len: 877
+5:109  0:000    7. DA070628: 'SSDT', 'Cpu0Ist', Rev: 1, Len: 2408
+5:109  0:000    8. DA070F90: 'SSDT', 'CpuPm', Rev: 1, Len: 2706
+5:109  0:000    9. DA071A28: 'ECDT', 'PARADISE', Rev: 1, Len: 193
+5:109  0:000  Found UEFI Acpi 1.0 RSDP at DA065000
+5:109  0:000  Printing ACPI tables from RSDP DA065000 ...
+5:109  0:000   DA065000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+5:109  0:000    (Xsdt: DA065078, Rsdt: DA065028)
+5:109  0:000    DA065078: 'XSDT', 'PARADISE', Rev: 1, Len: 116
+5:109  0:000    DA065028: 'RSDT', 'PARADISE', Rev: 1, Len: 76
+5:109  0:000    Tables in Xsdt: 10
+5:109  0:000    0. DA06FFE0: 'FACP', 'PARADISE', Rev: 4, Len: 244
+5:109  0:000        (Dsdt: DA065180, Facs: DA1E4F80, XDsdt: DA065180, XFacs: 0)
+5:109  0:000        DA065180: 'DSDT', 'PARADISE', Rev: 2, Len: 44638
+5:111  0:001        DA1E4F80: 'FACS', Ver: 2, Len: 64
+5:111  0:000    1. DA0700D8: 'APIC', 'PARADISE', Rev: 3, Len: 114
+5:111  0:000    2. DA070150: 'FPDT', 'PARADISE', Rev: 1, Len: 68
+5:111  0:000    3. DA070198: 'ASF!', ' HCG', Rev: 32, Len: 165
+5:111  0:000    4. DA070240: 'MCFG', 'PARADISE', Rev: 1, Len: 60
+5:111  0:000    5. DA070280: 'HPET', 'PARADISE', Rev: 1, Len: 56
+5:111  0:000    6. DA0702B8: 'SSDT', 'SataTabl', Rev: 1, Len: 877
+5:111  0:000    7. DA070628: 'SSDT', 'Cpu0Ist', Rev: 1, Len: 2408
+5:111  0:000    8. DA070F90: 'SSDT', 'CpuPm', Rev: 1, Len: 2706
+5:111  0:000    9. DA071A28: 'ECDT', 'PARADISE', Rev: 1, Len: 193
+5:111  0:000    Tables in Rsdt: 10
+5:111  0:000    0. DA0650F8: 'FACP', 'PARADISE', Rev: 2, Len: 132
+5:111  0:000        (Dsdt: DA065180, Facs: DA1E4F40)
+5:111  0:000        DA065180: 'DSDT', 'PARADISE', Rev: 2, Len: 44638
+5:112  0:001        DA1E4F40: 'FACS', Ver: 0, Len: 64
+5:112  0:000    1. DA0700D8: 'APIC', 'PARADISE', Rev: 3, Len: 114
+5:112  0:000    2. DA070150: 'FPDT', 'PARADISE', Rev: 1, Len: 68
+5:112  0:000    3. DA070198: 'ASF!', ' HCG', Rev: 32, Len: 165
+5:112  0:000    4. DA070240: 'MCFG', 'PARADISE', Rev: 1, Len: 60
+5:112  0:000    5. DA070280: 'HPET', 'PARADISE', Rev: 1, Len: 56
+5:112  0:000    6. DA0702B8: 'SSDT', 'SataTabl', Rev: 1, Len: 877
+5:112  0:000    7. DA070628: 'SSDT', 'Cpu0Ist', Rev: 1, Len: 2408
+5:112  0:000    8. DA070F90: 'SSDT', 'CpuPm', Rev: 1, Len: 2706
+5:112  0:000    9. DA071A28: 'ECDT', 'PARADISE', Rev: 1, Len: 193
